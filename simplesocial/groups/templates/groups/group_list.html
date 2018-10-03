@@ -3,6 +3,7 @@
 {% block pregroup %}
 <div class="col-md-4">
   <div class="content">
+<<<<<<< HEAD
     <h2>Groups</h2>
     <br/>    
     {% if user.is_authenticated %}
@@ -13,11 +14,27 @@
     </h3>
 
     {% endif %}
+=======
+    {% if user.is_authenticated %}
+    <h2>Welcome Back!
+      <a href="{% url 'posts:for_user' username=user.username%}">
+        @{{user.username}}
+      </a>
+    </h2>
+
+    {% endif %}
+    <h2>Groups</h2>
+    <p>Welcome to the groups page!</p>
+>>>>>>> 7b3d1d26f46578a60744c3cfd095ef210715c0fc
 
   </div>
   {% if user.is_authenticated %}
   <a href="{% url 'groups:create' %}" class='btn btn-md btn-fill btn-warning'>
+<<<<<<< HEAD
     <span class='glyphicon glyphicon-plus' style='font-size:10pt;font-family:Verdana,sans-serif'>Create New Group</span>
+=======
+    <span class='glyphicon glyphicon-plus-sign'>Create New Group!</span>
+>>>>>>> 7b3d1d26f46578a60744c3cfd095ef210715c0fc
   </a>
   {% endif %}
 

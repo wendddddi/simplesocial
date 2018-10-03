@@ -3,12 +3,19 @@
 
 {% block group_content %}
 <h4>Create a new group!</h4>
+<<<<<<< HEAD
 <h5>Please fill in the name and description for the new group.</h5>
 <br/>
   <form action="{% url 'groups:create'%}" method="post" id='groupForm'>
     {% csrf_token %}
     {% bootstrap_form form%}
     <br/>
+=======
+
+  <form action="{% url 'groups:create'%}" method="post" id='groupForm'>
+    {% csrf_token %}
+    {% bootstrap_form form%}
+>>>>>>> 7b3d1d26f46578a60744c3cfd095ef210715c0fc
     <input type="submit" class='btn btn-primary btn-large' value="Create">
   </form>
   
